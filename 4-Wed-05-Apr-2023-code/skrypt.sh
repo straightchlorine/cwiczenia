@@ -6,7 +6,6 @@ if [[ "$1" == '--date' || "$1" == '-d' ]]; then
   echo "$now"
 elif [[ "$1" == '--logs' || "$1" == '-l' ]]; then
   n=100
-
   if [ -n "$2" ]
   then
     n=$2
