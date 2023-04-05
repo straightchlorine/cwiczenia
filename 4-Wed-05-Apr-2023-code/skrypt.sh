@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 
-if [[ "$1" == '--date' ]]; then
+if [[ "$1" == '--date' || "$1" == '-d' ]]; then
   now=$(date +'%m/%d/%Y %R')
   echo "$now"
-elif [[ "$1" == '--logs' ]]; then
+elif [[ "$1" == '--logs' || "$1" == '-l' ]]; then
   n=100
 
   if [ -n "$2" ]
@@ -15,7 +15,7 @@ elif [[ "$1" == '--logs' ]]; then
   do
     touch log${i}.txt
   done
-elif [[ "$1" == '--help' ]]; then
+elif [[ "$1" == '--help' || "$1" == '-h' ]]; then
   echo 'Lista parametrów skryptu:'
   echo '--help wyświetla pomoc (ta wiadomość)'
   echo '--date wyświetla obecną datę'
