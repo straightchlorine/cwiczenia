@@ -19,9 +19,9 @@ elif [[ "$1" == '--logs' || "$1" == '-l' ]]; then
   done
 elif [[ "$1" == '--help' || "$1" == '-h' ]]; then
   echo 'Lista parametrów skryptu:'
-  echo '--help wyświetla pomoc (ta wiadomość)'
-  echo '--date wyświetla obecną datę'
-  echo '--logs n tworzy n plików o nazwie log{1..n}.txt (domyślnie 100)'
+  echo '--help (-h) wyświetla pomoc (ta wiadomość)'
+  echo '--date (-d) wyświetla obecną datę'
+  echo '--logs n (-l) tworzy n plików o nazwie log{1..n}.txt (domyślnie 100)'
 elif [[ "$1" == '--init' ]]; then
   git clone git@github.com:straightchlorine/cwiczenia.git
   dir=$(pwd)/cwiczenia
