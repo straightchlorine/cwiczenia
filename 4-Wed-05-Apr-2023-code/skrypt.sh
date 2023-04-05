@@ -26,4 +26,18 @@ elif [[ "$1" == '--init' ]]; then
   git clone git@github.com:straightchlorine/cwiczenia.git
   dir=$(pwd)/cwiczenia
   export PATH=$dir:$PATH
+elif [[ "$1" == '--error' || "$1" == '-e' ]]; then
+  n=100
+  if [ -n "$2" ]
+  then
+    n=$2
+  fi
+
+  for i in $(seq 1 $n)
+  do
+    mkdir error${i}
+    echo error${i}.txt >> error${i}/error${i}.txt
+    echo $0 >> error${i}/error${i}.txt
+    echo $now >> error${i}/error${i}.txt
+  done
 fi
