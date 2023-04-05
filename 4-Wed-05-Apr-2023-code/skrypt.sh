@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
+now=$(date +'%m/%d/%Y %R')
+
 if [[ "$1" == '--date' || "$1" == '-d' ]]; then
-  now=$(date +'%m/%d/%Y %R')
   echo "$now"
 elif [[ "$1" == '--logs' || "$1" == '-l' ]]; then
   n=100
@@ -13,7 +14,9 @@ elif [[ "$1" == '--logs' || "$1" == '-l' ]]; then
 
   for i in $(seq 1 $n)
   do
-    touch log${i}.txt
+    echo log${i}.txt >> log${i}.txt
+    echo $0 >> log${i}.txt
+    echo $now >> log${i}.txt 
   done
 elif [[ "$1" == '--help' || "$1" == '-h' ]]; then
   echo 'Lista parametrów skryptu:'
