@@ -20,4 +20,8 @@ elif [[ "$1" == '--help' || "$1" == '-h' ]]; then
   echo '--help wyświetla pomoc (ta wiadomość)'
   echo '--date wyświetla obecną datę'
   echo '--logs n tworzy n plików o nazwie log{1..n}.txt (domyślnie 100)'
+elif [[ "$1" == '--init' ]]; then
+  git clone git@github.com:straightchlorine/cwiczenia.git
+  dir=$(pwd)/cwiczenia
+  export PATH=$dir:$PATH
 fi
